@@ -8,26 +8,30 @@ btnCalcular.addEventListener("click", () => {
   let suma: number = Number(valor1.value) + Number(valor2.value);
   let resta: number = Number(valor1.value) - Number(valor2.value);
 
-  let guion: string = "-";
-  for (let i = 0; i <= 40; i++) {
-    guion = guion + "-";
+  function dibujarGuiones() {
+    let guion: string = "-";
+    for (let i = 0; i <= 40; i++) {
+      guion = guion + "-";
+    }
+    console.log(guion);
   }
 
   switch (calculo) {
     case 1:
-      console.log(guion);
+      dibujarGuiones();
       console.log("  El resultado de la operación es: " + suma);
-      console.log(guion);
+      dibujarGuiones();
       break;
 
     case 2:
-      console.log(guion);
+      dibujarGuiones();
       console.log(" El resultado de la operación es: " + resta);
-      console.log(guion);
+      dibujarGuiones();
       break;
+
     default:
-      console.log(guion);
+      dibujarGuiones();
       console.log("        *  El programa finalizó  *");
-      console.log(guion);
+      dibujarGuiones();
   }
 });
